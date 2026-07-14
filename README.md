@@ -1,7 +1,7 @@
 # Student Performance Analytics System using Linear Algebra
 A data-driven student performance analytics platform built using **Python, NumPy, and Streamlit**. The project applies **Linear Algebra** and **Statistical Analysis** to identify the major factors influencing student performance instead of simply displaying marks.
 
-The system analyzes **academic performance, behavioral habits, and extracurricular growth** to provide personalized insights, identify strengths and weaknesses, and discover hidden performance patterns using **Covariance Matrices** and **Eigenvalue Decomposition**.
+The system is designed for real classroom and mentoring workflows. It analyzes **academic performance, behavioral habits, and extracurricular growth** to provide personalized insights, identify strengths and weaknesses, and discover hidden performance patterns using **Covariance Matrices** and **Eigenvalue Decomposition**.
 
 ---
 
@@ -19,6 +19,30 @@ The system analyzes **academic performance, behavioral habits, and extracurricul
 - 🔍 Covariance matrix computation
 - 🧮 Eigenvalue and Eigenvector analysis
 - ⭐ Automatic identification of the most influential performance factors
+
+---
+
+## 🎯 Real-Time Use Cases
+
+### For mentors
+- Enter semester data during review sessions and instantly see whether a student is improving or slipping.
+- Check academic weaknesses, behavior alignment, and growth progress in one dashboard instead of using separate records.
+- Spot students who need intervention early using the risk score and alert system.
+
+### For class coordinators and admins
+- Compare students across a mentor group to find normal, attention-needed, and outlier profiles.
+- Review domain recommendations to see whether a student fits AI/ML, Web Dev, Systems, Cloud, or similar tracks.
+- Use audit logs and saved sessions to track how academic decisions were made over time.
+
+### For HODs and department reviews
+- Monitor semester-wise trends across students and mentors.
+- Identify weak subjects that appear repeatedly across the department.
+- Use covariance and eigen analysis to understand which factors are most strongly linked to performance.
+
+### For students
+- See what habits are helping or hurting performance.
+- Understand whether low scores are coming from academics, behavior, or low growth activity.
+- Get a clearer picture of the next improvement area before the next semester review.
 
 ---
 
