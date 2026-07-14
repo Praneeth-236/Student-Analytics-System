@@ -81,3 +81,54 @@ def detect_alerts(current_session, prev_session):
             alerts.append(f"Low growth activity: {growth_value:.1f}/10")
 
     return alerts
+
+
+def recommend_interventions(current_session, prev_session=None):
+    alerts = detect_alerts(current_session, prev_session)
+    if not alerts:
+        return ["No immediate intervention required. Continue the current plan and monitor next session."]
+
+    recommendations = []
+    score = overall_score(
+        current_session.get("grades_numeric", []),
+        current_session.get("behavior", []),
+        current_session.get("growth", []),
+    )
+    behavior = current_session.get("behavior", [])
+    growth = current_session.get("growth", [])
+
+    if score < 50:
+        recommendations.append("Schedule a mentor review and create a 2-week improvement plan.")
+
+    for alert in alerts:
+        lowered = alert.lower()
+        if "attendance" in lowered:
+            recommendations.append("Set weekly attendance tracking and inform the student about class priority.")
+        elif "study hours" in lowered:
+            recommendations.append("Assign a daily study block and verify progress in the next review.")
+        elif "screen time" in lowered:
+            recommendations.append("Reduce non-academic screen time and replace it with focused study sessions.")
+        elif "dsa" in lowered or "os" in lowered:
+            recommendations.append("Give a subject-specific practice sheet and short remedial quiz.")
+        elif "growth activity" in lowered:
+            recommendations.append("Ask the student to complete one certification, club task, or event participation this month.")
+        elif "grade drop" in lowered:
+            recommendations.append("Compare the last two semesters and identify subjects that need immediate remediation.")
+
+    if behavior:
+        attendance = _behavior_value(behavior, "Attendance")
+        study_hours = _behavior_value(behavior, "StudyHours")
+        screen_time = _behavior_value(behavior, "ScreenTime")
+        if attendance >= ALERT_ATTENDANCE_LOW and study_hours >= ALERT_STUDY_LOW and screen_time <= ALERT_SCREEN_HIGH:
+            recommendations.append("Keep the current routine and review only the weakest subject areas.")
+
+    if growth:
+        growth_value = growth_score(growth)
+        if growth_value >= 6:
+            recommendations.append("Encourage the student to document achievements for portfolio and placement readiness.")
+
+    cleaned = []
+    for item in recommendations:
+        if item not in cleaned:
+            cleaned.append(item)
+    return cleaned

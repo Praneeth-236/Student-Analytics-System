@@ -4,7 +4,7 @@ import io
 import numpy as np
 import streamlit as st
 
-from alerts import detect_alerts
+from alerts import detect_alerts, recommend_interventions
 from analysis import (
     academic_strengths,
     behavior_alignment,
@@ -180,6 +180,10 @@ def analysis_dashboard():
             st.warning(alert)
     else:
         st.write("None")
+
+    st.markdown("### Mentor Action Plan")
+    interventions = recommend_interventions(current, prev)
+    st.markdown(tags(interventions), unsafe_allow_html=True)
 
     with st.expander("How scores are computed"):
         st.write(

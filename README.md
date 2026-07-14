@@ -14,6 +14,7 @@ The system is designed for real classroom and mentoring workflows. It analyzes *
 - 📈 Overall weighted performance score
 - 📉 Semester-wise performance comparison
 - ⚠️ Risk level prediction
+- 🧭 Mentor action plan recommendations
 - 🎯 Top skill gap identification
 - 📐 Student feature matrix visualization
 - 🔍 Covariance matrix computation
@@ -28,6 +29,7 @@ The system is designed for real classroom and mentoring workflows. It analyzes *
 - Enter semester data during review sessions and instantly see whether a student is improving or slipping.
 - Check academic weaknesses, behavior alignment, and growth progress in one dashboard instead of using separate records.
 - Spot students who need intervention early using the risk score and alert system.
+- Follow the mentor action plan to turn alerts into concrete next steps such as remedial practice, attendance tracking, or a 2-week improvement plan.
 
 ### For class coordinators and admins
 - Compare students across a mentor group to find normal, attention-needed, and outlier profiles.
