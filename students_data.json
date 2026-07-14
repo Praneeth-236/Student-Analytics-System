@@ -1,0 +1,325 @@
+{
+  "version": 2,
+  "students": {
+    "SRN001": {
+      "name": "Aarav N",
+      "mentor": "Dr. Meera",
+      "semesters": {
+        "1": {
+          "sessions": [
+            {
+              "subjects": {
+                "Python for Computational Problem Solving": "A"
+              },
+              "subjects_list": [
+                "Python for Computational Problem Solving"
+              ],
+              "grades": [
+                "A"
+              ],
+              "grades_numeric": [
+                9
+              ],
+              "behavior": {
+                "StudyHours": 11.5,
+                "SleepHours": 9.5,
+                "Attendance": 94,
+                "Assignments": 9,
+                "ProjectSubmissions": 9,
+                "ScreenTime": 6.65
+              },
+              "growth": {
+                "ClubsScore": 0.0,
+                "EventsScore": 0.0,
+                "Certifications": 0.0,
+                "LinkedInScore": 0.0
+              },
+              "behavior_details": {
+                "StudyHoursNormal": 11.5,
+                "StudyHoursExam": 11.5,
+                "SleepNormal": 9.5,
+                "SleepExam": 9.5,
+                "ScreenTimeNormal": 11.5,
+                "ScreenTimeExam": 1.0,
+                "ScreenTimeHoliday": 3.0
+              },
+              "growth_details": {
+                "ClubCount": 0,
+                "ClubType": "Technical",
+                "EventCount": 0,
+                "EventType": "Technical",
+                "Certifications": 0,
+                "LinkedInConnections": 0,
+                "LinkedInPosts": 0
+              },
+              "created_at": "2026-04-08T09:15:41.455284+00:00",
+              "created_by": "mentor.meera",
+              "session_no": 1
+            },
+            {
+              "subjects": {
+                "Python for Computational Problem Solving": "A"
+              },
+              "subjects_list": [
+                "Python for Computational Problem Solving"
+              ],
+              "grades": [
+                "A"
+              ],
+              "grades_numeric": [
+                9
+              ],
+              "behavior": {
+                "StudyHours": 11.5,
+                "SleepHours": 9.5,
+                "Attendance": 94,
+                "Assignments": 9,
+                "ProjectSubmissions": 9,
+                "ScreenTime": 6.65
+              },
+              "growth": {
+                "ClubsScore": 0.0,
+                "EventsScore": 0.0,
+                "Certifications": 0.0,
+                "LinkedInScore": 0.0
+              },
+              "behavior_details": {
+                "StudyHoursNormal": 11.5,
+                "StudyHoursExam": 11.5,
+                "SleepNormal": 9.5,
+                "SleepExam": 9.5,
+                "ScreenTimeNormal": 11.5,
+                "ScreenTimeExam": 1.0,
+                "ScreenTimeHoliday": 3.0
+              },
+              "growth_details": {
+                "ClubCount": 0,
+                "ClubType": "Technical",
+                "EventCount": 0,
+                "EventType": "Technical",
+                "Certifications": 0,
+                "LinkedInConnections": 0,
+                "LinkedInPosts": 0
+              },
+              "created_at": "2026-04-08T09:15:42.672353+00:00",
+              "created_by": "mentor.meera",
+              "session_no": 2
+            }
+          ]
+        },
+        "2": {
+          "sessions": [
+            {
+              "subjects": {
+                "Problem Solving with C": "A"
+              },
+              "subjects_list": [
+                "Problem Solving with C"
+              ],
+              "grades": [
+                "A"
+              ],
+              "grades_numeric": [
+                9
+              ],
+              "behavior": {
+                "StudyHours": 5.2,
+                "SleepHours": 4.05,
+                "Attendance": 85,
+                "Assignments": 6,
+                "ProjectSubmissions": 5,
+                "ScreenTime": 4.25
+              },
+              "growth": {
+                "ClubsScore": 2.0,
+                "EventsScore": 0.6,
+                "Certifications": 2.0,
+                "LinkedInScore": 1.5
+              },
+              "behavior_details": {
+                "StudyHoursNormal": 1.0,
+                "StudyHoursExam": 11.5,
+                "SleepNormal": 4.5,
+                "SleepExam": 3.0,
+                "ScreenTimeNormal": 4.0,
+                "ScreenTimeExam": 2.5,
+                "ScreenTimeHoliday": 7.5
+              },
+              "growth_details": {
+                "ClubCount": 2,
+                "ClubType": "Technical",
+                "EventCount": 1,
+                "EventType": "Non-technical",
+                "Certifications": 2,
+                "LinkedInConnections": 50,
+                "LinkedInPosts": 1
+              },
+              "created_at": "2026-04-08T09:17:51.506753+00:00",
+              "created_by": "mentor.meera",
+              "session_no": 1
+            }
+          ]
+        },
+        "3": {
+          "sessions": []
+        },
+        "3": {
+          "sessions": []
+        }
+      }
+    },
+    "SRN002": {
+      "name": "Diya P",
+      "mentor": "Dr. Meera",
+      "semesters": {
+        "4": {
+          "sessions": [
+            {
+              "subjects": {
+                "Microprocessor & Architecture": "A",
+                "Computer Networks": "A",
+                "Design & Analysis of Algorithms": "A",
+                "Operating Systems": "A",
+                "Linear Algebra": "A"
+              },
+              "subjects_list": [
+                "Microprocessor & Architecture",
+                "Computer Networks",
+                "Design & Analysis of Algorithms",
+                "Operating Systems",
+                "Linear Algebra"
+              ],
+              "grades": [
+                "A",
+                "A",
+                "A",
+                "A",
+                "A"
+              ],
+              "grades_numeric": [
+                9,
+                9,
+                9,
+                9,
+                9
+              ],
+              "behavior": {
+                "StudyHours": 6.8,
+                "SleepHours": 6.7,
+                "Attendance": 85,
+                "Assignments": 6,
+                "ProjectSubmissions": 5,
+                "ScreenTime": 4.4
+              },
+              "growth": {
+                "ClubsScore": 0.0,
+                "EventsScore": 0.0,
+                "Certifications": 0.0,
+                "LinkedInScore": 0.0
+              },
+              "behavior_details": {
+                "StudyHoursNormal": 6.0,
+                "StudyHoursExam": 8.0,
+                "SleepNormal": 7.0,
+                "SleepExam": 6.0,
+                "ScreenTimeNormal": 4.0,
+                "ScreenTimeExam": 4.0,
+                "ScreenTimeHoliday": 6.0
+              },
+              "growth_details": {
+                "ClubCount": 0,
+                "ClubType": "Technical",
+                "EventCount": 0,
+                "EventType": "Technical",
+                "Certifications": 0,
+                "LinkedInConnections": 0,
+                "LinkedInPosts": 0
+              },
+              "created_at": "2026-04-08T08:11:13.999137+00:00",
+              "created_by": "mentor.meera",
+              "session_no": 1
+            }
+          ]
+        },
+        "1": {
+          "sessions": [
+            {
+              "subjects": {
+                "Python for Computational Problem Solving": "A"
+              },
+              "subjects_list": [
+                "Python for Computational Problem Solving"
+              ],
+              "grades": [
+                "A"
+              ],
+              "grades_numeric": [
+                9
+              ],
+              "behavior": {
+                "StudyHours": 6.5,
+                "SleepHours": 6.7,
+                "Attendance": 85,
+                "Assignments": 6,
+                "ProjectSubmissions": 5,
+                "ScreenTime": 4.4
+              },
+              "growth": {
+                "ClubsScore": 3.0,
+                "EventsScore": 0.0,
+                "Certifications": 0.0,
+                "LinkedInScore": 0.0
+              },
+              "behavior_details": {
+                "StudyHoursNormal": 5.5,
+                "StudyHoursExam": 8.0,
+                "SleepNormal": 7.0,
+                "SleepExam": 6.0,
+                "ScreenTimeNormal": 4.0,
+                "ScreenTimeExam": 4.0,
+                "ScreenTimeHoliday": 6.0
+              },
+              "growth_details": {
+                "ClubCount": 3,
+                "ClubType": "Technical",
+                "EventCount": 0,
+                "EventType": "Technical",
+                "Certifications": 0,
+                "LinkedInConnections": 0,
+                "LinkedInPosts": 0
+              },
+              "created_at": "2026-04-08T08:11:35.661599+00:00",
+              "created_by": "mentor.meera",
+              "session_no": 1
+            }
+          ]
+        }
+      }
+    },
+    "SRN003": {
+      "name": "Ishaan R",
+      "mentor": "Dr. Meera",
+      "semesters": {}
+    },
+    "SRN004": {
+      "name": "Kavya S",
+      "mentor": "Prof. Rohan",
+      "semesters": {}
+    },
+    "SRN005": {
+      "name": "Ritvik M",
+      "mentor": "Prof. Rohan",
+      "semesters": {}
+    },
+    "SRN006": {
+      "name": "Tanvi K",
+      "mentor": "Ms. Asha",
+      "semesters": {}
+    },
+    "SRN007": {
+      "name": "Yash V",
+      "mentor": "Ms. Asha",
+      "semesters": {}
+    }
+  }
+}

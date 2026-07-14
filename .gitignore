@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+audit.log
+students_data.backup.json

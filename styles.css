@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    --ink: #111827;
+    --muted: #6b7280;
+    --card: #ffffff;
+    --accent: #0ea5a4;
+    --accent-2: #f59e0b;
+    --soft: #f8fafc;
+    --border: #e5e7eb;
+    --danger: #ef4444;
+}
+
+html, body, [class*="css"]  {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.stApp {
+    background: radial-gradient(1200px 600px at 10% -10%, #d1fae5 0%, rgba(209,250,229,0) 55%),
+                            radial-gradient(900px 500px at 90% 0%, #fde68a 0%, rgba(253,230,138,0) 45%),
+                            linear-gradient(180deg, #f8fafc 0%, #ffffff 60%);
+}
+
+.hero {
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #0ea5a4 0%, #14b8a6 50%, #22c55e 100%);
+    color: #ffffff;
+    box-shadow: 0 12px 30px rgba(14, 165, 164, 0.2);
+    margin-bottom: 12px;
+    animation: fadeUp 500ms ease-out;
+}
+
+.hero h1 {
+    font-size: clamp(1.4rem, 1.2rem + 1vw, 2.2rem);
+    margin: 0 0 6px 0;
+}
+
+.hero p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.section-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 12px 14px;
+    box-shadow: 0 10px 25px rgba(17, 24, 39, 0.06);
+}
+
+.metric-pill {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #ecfeff;
+    color: #0e7490;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.stTextInput > div > div > input,
+.stSelectbox > div > div,
+.stNumberInput > div > div > input {
+    border-radius: 10px;
+}
+
+.stButton > button {
+    background: #0ea5a4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 14px;
+    font-weight: 600;
+    box-shadow: 0 8px 16px rgba(14, 165, 164, 0.2);
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 720px) {
+    .hero { padding: 14px 16px; }
+}
