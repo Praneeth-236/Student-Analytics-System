@@ -1,82 +1,278 @@
-# Mathematical Functions and Formulas
+# Student Performance Analytics System using Linear Algebra
+A data-driven student performance analytics platform built using **Python, NumPy, and Streamlit**. The project applies **Linear Algebra** and **Statistical Analysis** to identify the major factors influencing student performance instead of simply displaying marks.
 
-This project uses a small set of linear algebra helpers plus scoring and averaging formulas to turn academic, behavior, and growth data into consistent signals for mentoring and analytics.
+The system analyzes **academic performance, behavioral habits, and extracurricular growth** to provide personalized insights, identify strengths and weaknesses, and discover hidden performance patterns using **Covariance Matrices** and **Eigenvalue Decomposition**.
 
-## linear_algebra.py
+---
 
-- `dot_product(a, b)`
-  - What: computes $a \cdot b$.
-  - Why: used for weighted sums and cosine similarity.
-- `norm(a)`
-  - What: computes the Euclidean length $\|a\|_2$.
-  - Why: used to normalize vectors and measure changes.
-- `mean_vector(matrix)`
-  - What: column-wise mean of a matrix.
-  - Why: useful when aggregating multiple vectors.
-- `cosine_similarity(a, b)`
-  - What: $\frac{a \cdot b}{\|a\|\,\|b\|}$, with a zero-safe fallback.
-  - Why: compares direction (pattern similarity) of behavior vectors.
+## 📌 Features
 
-## analysis.py
+- 📊 Student performance dashboard
+- 📚 Academic strength and weakness analysis
+- 🧠 Behavioral analysis based on study habits
+- 🚀 Growth analysis using certifications, clubs, events, and LinkedIn activity
+- 📈 Overall weighted performance score
+- 📉 Semester-wise performance comparison
+- ⚠️ Risk level prediction
+- 🎯 Top skill gap identification
+- 📐 Student feature matrix visualization
+- 🔍 Covariance matrix computation
+- 🧮 Eigenvalue and Eigenvector analysis
+- ⭐ Automatic identification of the most influential performance factors
 
-- `grades_to_numeric(grades)`
-  - What: maps letter grades to numeric values.
-  - Why: enables averaging and numeric scoring.
-- `normalize_vector(values, max_values)`
-  - What: element-wise normalization $v_i / m_i$ with clipping to $[0,1]$.
-  - Why: puts different scales on a common range for fair averaging.
-- `growth_score(growth_vector)`
-  - What: sums growth components then normalizes to 0-10.
-  - Why: produces a single growth metric from structured inputs.
-- `behavior_insights(behavior_vector)`
-  - What: compares normalized behavior to the normalized ideal vector.
-  - Why: surfaces strengths vs. weaknesses per behavior label.
-- `behavior_alignment(behavior_vector)`
-  - What: cosine similarity between behavior and ideal behavior.
-  - Why: measures how closely behavior matches target patterns.
-- `overall_score(academic_vector, behavior_vector, growth_vector)`
-  - What: weighted sum of behavior, skill, growth, and CGPA, scaled to 0-100.
-  - Why: consistent overall score used across dashboards and trends.
-- `behavior_deviation(behavior_vector)`
-  - What: mean absolute deviation from ideal behavior.
-  - Why: highlights how far behavior drifts from targets.
-- `top_skill_gaps(subjects, grades_numeric, count)`
-  - What: sorts grades to find lowest scores.
-  - Why: identifies skills needing attention.
-- `build_student_matrix(students, mode="summary")`
-  - What: constructs a matrix $A$ with one student vector per column.
-  - Why: enables matrix multiplication and cohort-level analysis.
-- `compute_scores_matrix(matrix, weights)`
-  - What: computes $W^T \cdot A$ for all students.
-  - Why: scores all students in one matrix multiplication.
-- `mean_profile_vector(matrix)`
-  - What: computes the mean student profile from the matrix.
-  - Why: provides the cohort average vector.
-- `distance_from_mean(student_vector, mean_vector)`
-  - What: computes $\|S - \mu\|_2$.
-  - Why: classifies how far a student is from the cohort average.
-- `distance_thresholds(distances)`
-  - What: derives low/high cutoffs from distance quantiles.
-  - Why: adaptive classification for Normal/Needs Attention/Outlier.
-- `compute_covariance(A)`
-  - What: covariance matrix $C = \text{cov}(A)$.
-  - Why: captures feature co-variation across students.
-- `eigen_analysis(C)`
-  - What: eigenvalues and eigenvectors of $C$.
-  - Why: finds dominant performance drivers.
+---
 
-## app.py
+## 🧠 Project Workflow
 
-Behavior aggregation (semester input):
-- Study hours:
-  - What: $0.6 \times \text{normal} + 0.4 \times \text{exam}$
-  - Why: normal days dominate the term, but exams still matter.
-- Sleep hours:
-  - What: $0.7 \times \text{normal} + 0.3 \times \text{exam}$
-  - Why: weights routine sleep higher than exam periods.
-- Screen time:
-  - What: $0.5 \times \text{normal} + 0.3 \times \text{exam} + 0.2 \times \text{holiday}$
-  - Why: balances regular usage with spikes in exams or holidays.
+```text
+Student Data
+      │
+      ▼
+Feature Engineering
+(Academics + Behavior + Growth)
+      │
+      ▼
+Student Feature Matrix
+      │
+      ▼
+Normalization
+      │
+      ▼
+Overall Performance Score
+      │
+      ├──────────────► Skill Gap Analysis
+      ├──────────────► Behavior Analysis
+      ├──────────────► Growth Analysis
+      ▼
+Covariance Matrix
+      │
+      ▼
+Eigenvalue Decomposition
+      │
+      ▼
+Top Performance Drivers
+      │
+      ▼
+Interactive Dashboard
+```
+
+---
+
+# 🏗️ System Architecture
+
+```text
+Input Layer
+│
+├── Academic Scores
+├── Behavior Metrics
+└── Growth Activities
+
+        │
+
+Feature Engineering
+
+        │
+
+Student Feature Matrix
+
+        │
+
+Linear Algebra Engine
+│
+├── Dot Product
+├── Matrix Operations
+├── Covariance Matrix
+├── Euclidean Distance
+├── Cosine Similarity
+└── Eigen Analysis
+
+        │
+
+Analytics Engine
+│
+├── Overall Score
+├── Risk Prediction
+├── Skill Gaps
+├── Behavior Alignment
+└── Performance Drivers
+
+        │
+
+Streamlit Dashboard
+```
+
+---
+
+# 📊 Parameters Used
+
+## Academic
+
+- Subject Grades
+- Skill Categories
+- CGPA Score
+
+## Behavioral
+
+- Study Hours
+- Sleep Hours
+- Attendance
+- Assignment Completion
+- Project Submission
+- Screen Time
+
+## Growth
+
+- Clubs
+- Events
+- Certifications
+- LinkedIn Activity
+
+---
+
+# 📐 Linear Algebra Concepts Used
+
+### Matrix Representation
+Each student is represented as a **feature vector**, and all students are combined into a **student matrix**.
+
+---
+
+### Dot Product
+Used to calculate the weighted overall performance score.
+
+$$
+Score = W^T \cdot X
+$$
+
+where:
+
+- **W** = Weight Vector
+- **X** = Student Feature Vector
+
+---
+
+### Euclidean Distance
+Measures how far a student is from the average student profile.
+
+$$
+Distance = ||Student - Mean||
+$$
+
+---
+
+### Cosine Similarity
+Measures how closely a student's behavior aligns with the ideal behavior profile.
+
+$$
+Similarity=\frac{A\cdot B}{||A||||B||}
+$$
+
+---
+
+### Covariance Matrix
+Identifies relationships between different performance factors.
+
+Examples:
+
+- Study Hours ↔ Academic Performance
+- Screen Time ↔ Performance
+- Attendance ↔ CGPA
+
+---
+
+### Eigenvalue Decomposition
+Extracts the dominant patterns within the covariance matrix.
+
+- **Eigenvalues** → Importance of each pattern
+- **Eigenvectors** → Features responsible for that pattern
+
+The system identifies the top contributing features affecting overall student performance.
+
+---
+
+# 📊 Performance Insights Generated
+The application provides:
+
+- Overall Performance Score
+- Academic Strengths
+- Academic Weaknesses
+- Behavioral Strengths
+- Behavioral Weaknesses
+- Growth Score
+- Semester Comparison
+- Risk Level
+- Top Skill Gaps
+- Student Feature Matrix
+- Dominant Performance Drivers
+- Feature Importance Ranking
+
+---
+
+# 🛠️ Technologies Used
+
+- Python
+- NumPy
+- Streamlit
+- Pandas
+- Linear Algebra
+- Statistical Analysis
+
+---
+
+# 🚀 Future Improvements
+
+- Machine Learning-based performance prediction
+- PCA for dimensionality reduction
+- Student clustering using K-Means
+- Personalized improvement recommendations
+- Faculty analytics dashboard
+- Time-series performance forecasting
+- Automated report generation
+- Deep learning-based performance prediction
+
+---
+
+# 📸 Screenshots
+
+> Add screenshots of:
+
+- Dashboard
+- Student Matrix
+- Covariance Matrix
+- Performance Analysis
+- Eigen Analysis
+- Overall Analytics
+
+---
+
+# 🎯 Learning Outcomes
+This project demonstrates practical applications of:
+
+- Linear Algebra
+- Matrix Operations
+- Feature Engineering
+- Statistical Analysis
+- Data Visualization
+- Python Programming
+- Streamlit Application Development
+- Educational Data Analytics
+
+---
+
+# 👨‍💻 Author
+**Praneeth Shetty**
+
+**GitHub:** *(Add your GitHub profile link here)*
+
+**LinkedIn:** *(Add your LinkedIn profile link here)*
+
+---
+
+## ⭐ Key Highlights
+
+- Built a complete educational analytics platform using **Linear Algebra**.
+- Represented students as mathematical feature vectors for analysis.
+- Applied **Dot Products**, **Euclidean Distance**, **Cosine Similarity**, **Covariance Matrices**, and **Eigenvalue Decomposition** to uncover hidden performance patterns.
+- Delivered explainable insights instead of only numerical scores, making student performance analysis more interpretable and actionable.
 
 Growth aggregation (semester input):
 - Clubs score:
